@@ -1,88 +1,81 @@
-# RC Plane UAV Project ✈️ (SpeedyBee Wing 405 + RadioMaster + GPS)
+<div align="center">
 
-This repository documents my **fixed-wing RC plane build and integration** using a **SpeedyBee Wing 405** flight controller,
-GPS module, BLDC propulsion system and RadioMaster transmitter setup.
+# Scratch-Built ArduPilot RC Plane
 
-The goal of this project is to build a stable and expandable UAV platform for **manual flight + autopilot-supported navigation and testing**.
+**A foam-board fixed-wing UAV built from scratch and flown on ArduPilot: SpeedyBee F405 Wing flight controller, GPS, 433 MHz telemetry and Mission Planner. Full parameter file and a real flight log included.**
 
----
+![ArduPilot](https://img.shields.io/badge/ArduPilot-Plane-0B8ED8?style=for-the-badge&logo=ardupilot&logoColor=white)
+![FC](https://img.shields.io/badge/SpeedyBee-F405%20Wing-f59e0b?style=for-the-badge)
+![Flight log](https://img.shields.io/badge/flight%20log-included-22c55e?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge)
 
-## ✅ Hardware Used
+<img src="docs/images/ground-station-setup.jpeg" width="80%" alt="The plane with the RadioMaster transmitter and Mission Planner ground station"/>
 
-### Flight Controller
-- **SpeedyBee Wing 405** (ArduPilot compatible)
-
-### RC System
-- **RadioMaster transmitter** (manual control + mode switching)
-
-### Propulsion
-- **BLDC motor: 1000KV**
-- ESC + propeller (fixed-wing configuration)
-
-### Navigation
-- **GPS module** (positioning + navigation ready)
+</div>
 
 ---
 
-## 🔧 What I did in this project
-- ✅ Designed and assembled the fixed-wing airframe
-- ✅ Integrated flight controller + GPS + power system
-- ✅ RC calibration and control mapping
-- ✅ ArduPilot parameter setup and configuration
-- ✅ Ground testing + mission planner verification
-- ✅ Collected flight log data for analysis
+## The build
 
----
+A hand-built foam-board airframe (high wing, conventional tail) turned into a GPS-capable UAV. Everything here (the parameters and the DataFlash log) is real data from this aircraft, so you can reproduce the setup or learn how to read ArduPilot logs.
 
-## 🖼️ Project Images
+<table>
+<tr>
+<td width="50%"><img src="docs/images/top-view.jpeg" alt="Top view of the airframe"/><br/><sub>Airframe, top view</sub></td>
+<td width="50%"><img src="docs/images/plane-and-pilot.jpeg" alt="Builder holding the plane and transmitter at the field"/><br/><sub>At the field</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/images/avionics-bay.jpeg" alt="Avionics bay: FC, ESC, GPS and telemetry radio"/><br/><sub>Avionics bay: FC, ESC, GPS, 433 MHz telemetry radio</sub></td>
+<td width="50%"><img src="docs/images/field-tuning.jpeg" alt="Tuning parameters at the field"/><br/><sub>Field tuning in Mission Planner</sub></td>
+</tr>
+</table>
 
-### RC Plane (Top View)
-![RC Plane Top View](docs/images/rc-plane-top-view.jpeg)
+## Hardware
 
-### Setup (Flight Controller + Mission Planner + RadioMaster)
-![RC Plane Setup](docs/images/rc-plane-setup-radiomaster.jpeg)
+| Part | Details |
+|---|---|
+| Flight controller | **SpeedyBee F405 Wing** running **ArduPilot Plane** |
+| Radio | **RadioMaster** transmitter, with mode switching on a switch |
+| GPS | **Ready To Sky** GPS module (with compass) |
+| Telemetry | **433 MHz** telemetry radio pair to the ground station |
+| Propulsion | **1000 KV** brushless motor, ESC, 2-blade prop |
+| Airframe | Scratch-built foam board, with carbon spars and bolt-on wings |
+| Ground station | Mission Planner on a laptop |
 
----
+## What's in the repo
 
-## 🧠 ArduPilot Configuration
-This repo includes my configuration and tuning reference file:
+| File | What it's for |
+|---|---|
+| [`ardupilot/log_plane.param`](ardupilot/log_plane.param) | The full ArduPilot parameter set for this airframe. Load it in Mission Planner via **Config → Full Parameter List → Load from file**. |
+| [`logs/2025-12-09_17-05-20.bin`](logs/2025-12-09_17-05-20.bin) | A DataFlash flight log. Open it in Mission Planner (**Ctrl+F → Review a Log**) or in [UAV Log Viewer](https://plot.ardupilot.org/). |
+| `docs/images/` | Build photos |
 
-- `ardupilot/params/log_plane.param`
+## What I did
 
-This makes the setup reproducible for future iterations and debugging.
+- Designed and built the airframe
+- Integrated the FC, GPS, telemetry and power system
+- Calibrated the radio and mapped flight modes
+- Configured and tuned ArduPilot parameters
+- Ran ground tests and verified everything in Mission Planner
+- Logged flight data for analysis
 
----
+## Next steps
 
-## 📊 Flight Logs
-Flight testing logs are saved in:
+- [ ] Vibration isolation and cleaner cable management
+- [ ] Failsafe tuning (RC loss, GPS loss, low battery)
+- [ ] Autonomous mission tests: AUTO, RTL, LOITER
+- [ ] Flight video + log analysis write-up
 
-- `logs/2025-12-09_17-05-20.bin`
+## Safety
 
-These logs can be opened in **Mission Planner** for performance verification and debugging.
+Fly within local regulations, away from people, with a working failsafe. Bench-test with the propeller removed.
 
----
+## License
 
-## 📂 Repository Structure
-- `docs/` → photos + build notes
-- `ardupilot/params/` → parameter files (`.param`)
-- `logs/` → DataFlash logs (`.bin`)
+[MIT](LICENSE) © Prateek Sarkar
 
----
+<div align="center">
 
-## 🚀 Future Improvements (Planned)
-- Improve airframe cable management and vibration isolation
-- Add telemetry link for live monitoring
-- Add better failsafe tuning (RC + GPS)
-- Autonomous modes testing (AUTO / RTL / LOITER as supported)
+**First ArduPilot plane? Grab the params, and leave a ⭐ if they helped.**
 
----
-
-## ⚠️ Disclaimer
-This project is intended for learning and experimentation.
-Always follow safety guidelines while testing UAVs.
-
----
-
-## 👤 Author
-**Prateek Sarkar**  
-UAV Systems • Embedded Electronics • PCB Design • Robotics
+</div>

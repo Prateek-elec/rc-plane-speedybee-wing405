@@ -1,6 +1,6 @@
 <div align="center">
 
-# Scratch-Built ArduPilot RC Plane
+<img src="docs/banner.png" alt="Scratch-Built ArduPilot Plane" width="100%"/>
 
 **A foam-board fixed-wing UAV built from scratch and flown on ArduPilot: SpeedyBee F405 Wing flight controller, GPS, 433 MHz telemetry and Mission Planner. Full parameter file and a real flight log included.**
 
@@ -9,11 +9,16 @@
 ![Flight log](https://img.shields.io/badge/flight%20log-included-22c55e?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge)
 
-<img src="docs/images/ground-station-setup.jpeg" width="80%" alt="The plane with the RadioMaster transmitter and Mission Planner ground station"/>
-
 </div>
 
 ---
+
+## 🔥 Why it hits different
+
+- ✈️ **Scratch-built from foam board:** no kit, no shortcuts.
+- 🧭 **Real autopilot:** ArduPilot on a SpeedyBee F405 Wing with GPS and 433 MHz telemetry.
+- 📊 **Real data:** the full parameter file and an actual DataFlash flight log.
+- 🎓 **Learn by copying:** load the params, open the log, see how it was tuned.
 
 ## The build
 
@@ -74,8 +79,16 @@ Fly within local regulations, away from people, with a working failsafe. Bench-t
 
 [MIT](LICENSE) © Prateek Sarkar
 
+---
+
 <div align="center">
 
-**First ArduPilot plane? Grab the params, and leave a ⭐ if they helped.**
+### If this made you go *"wait, that's sick"* 👀
+
+**Drop a ⭐ so more builders find it, and share it with someone who'd build one.**
+
+[![Share on X](https://img.shields.io/badge/share%20on-X-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/intent/tweet?text=Built%20an%20ArduPilot%20plane%20out%20of%20foam%20board%20%E2%9C%88%EF%B8%8F&url=https%3A%2F%2Fgithub.com%2FPrateek-elec%2Frc-plane-speedybee-wing405)
+[![Share on LinkedIn](https://img.shields.io/badge/share%20on-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgithub.com%2FPrateek-elec%2Frc-plane-speedybee-wing405)
+[![Follow](https://img.shields.io/badge/follow-@Prateek--elec-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Prateek-elec)
 
 </div>

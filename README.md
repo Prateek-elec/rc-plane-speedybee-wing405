@@ -13,7 +13,7 @@
 
 ---
 
-## 🔥 Why it hits different
+## Highlights
 
 - ✈️ **Scratch-built from foam board:** no kit, no shortcuts.
 - 🧭 **Real autopilot:** ArduPilot on a SpeedyBee F405 Wing with GPS and 433 MHz telemetry.
@@ -83,7 +83,7 @@ Fly within local regulations, away from people, with a working failsafe. Bench-t
 
 <div align="center">
 
-### If this made you go *"wait, that's sick"* 👀
+### Found this useful?
 
 **Drop a ⭐ so more builders find it, and share it with someone who'd build one.**
 

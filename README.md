@@ -64,12 +64,33 @@ A hand-built foam-board airframe (high wing, conventional tail) turned into a GP
 - Ran ground tests and verified everything in Mission Planner
 - Logged flight data for analysis
 
+## Flight log analysis
+
+<img src="docs/images/flight-log-analysis.png" alt="Flight log analysis: altitude, speed, attitude, vibration, ground track and battery" width="100%"/>
+
+Plotted from [`logs/2025-12-09_17-05-20.bin`](logs/2025-12-09_17-05-20.bin) with pymavlink. The ground track is shown relative to home.
+
+| | Result |
+|---|---|
+| **Flight** | About 6 minutes airborne, 3.9 km flown, up to 36 m above home and 187 m away |
+| **Speed** | Cruise around 11–12 m/s, peak ground speed 15.6 m/s (56 km/h) |
+| **Modes** | Took off and climbed out in **FBWA**, held position in **LOITER** for 100 s, then flew FBWA circuits and landed |
+| **Loiter** | Held 24–25 m above home, within about ±1 m, for the whole 100 s |
+| **Attitude tracking** | Roll followed the demand with 5.8° RMS error, pitch 3.5° (in flight) |
+| **Vibration** | Peak 8.8 m/s² in flight (mean Z 1.3 m/s²), far below the 30 m/s² guideline. All 13 accelerometer clips happened at the touchdown impact |
+| **Power** | 4S pack: 16.5 V → 15.8 V at rest, lowest 14.8 V under load, about 6 A average, 603 mAh used |
+
+**Takeaways:** the airframe flies cleanly on this tune, the FC mounting gives low vibration, and the battery had plenty in reserve. AUTOTUNE was armed on the ground after landing, so this log has no AutoTune data. That's the next flight.
+
 ## Next steps
 
 - [ ] Vibration isolation and cleaner cable management
 - [ ] Failsafe tuning (RC loss, GPS loss, low battery)
-- [ ] Autonomous mission tests: AUTO, RTL, LOITER
-- [ ] Flight video + log analysis write-up
+- [x] LOITER tested (held altitude within ±1 m)
+- [x] Flight log analysis write-up
+- [ ] AutoTune flight
+- [ ] Autonomous mission tests: AUTO, RTL
+- [ ] Flight video
 
 ## Safety
 
